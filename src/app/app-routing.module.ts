@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RickAndMortyService } from './services/rick-and-morty.service';
 
 const routes: Routes = [
   {
@@ -11,6 +12,6 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule]
+ providers: [RickAndMortyService]
 })
 export class AppRoutingModule {}
